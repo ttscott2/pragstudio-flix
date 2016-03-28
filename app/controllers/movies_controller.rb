@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.all
+    @movies = Movie.released
   end
 
   def show
@@ -34,7 +34,7 @@ class MoviesController < ApplicationController
     redirect_to root_path
   end
 
-  
+
   private
 
   def movie_params
