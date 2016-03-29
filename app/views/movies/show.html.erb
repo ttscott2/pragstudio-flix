@@ -1,6 +1,8 @@
 <article>
   <header>
     <h1><%= @movie.title %></h1>
+    <h3>Poster</h3>
+    <%= image_for(@movie) %>
   </header>
   <h2>Description</h2>
   <p>
@@ -8,10 +10,23 @@
   </p>
   <h3>Rating</h3>
   <p><%= @movie.rating %></p>
+
   <h3>Released On</h3>
   <p><%= @movie.released_on %></p>
+
   <h3>Total Gross</h3>
   <p><%= format_total_gross(@movie) %></p>
+
+  <h3>Cast</h3>
+  <p><%= @movie.cast %></p>
+
+  <h3>Director</h3>
+  <p><%= @movie.director %></p>
+
+  <h3>Running Time</h3>
+  <p><%= @movie.duration %></p>
+
+
 </article>
 
 <%= link_to "All Movies", root_path %>
